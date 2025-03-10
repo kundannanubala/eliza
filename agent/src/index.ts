@@ -22,6 +22,7 @@ import {
 import { defaultCharacter } from "./defaultCharacter.ts";
 
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
+import { hederaPlugin } from "@elizaos/plugin-hedera";
 import JSON5 from 'json5';
 
 import fs from "fs";
@@ -627,6 +628,7 @@ export async function createAgent(
         // character.plugins are handled when clients are added
         plugins: [
             bootstrapPlugin,
+            hederaPlugin,
         ]
             .flat()
             .filter(Boolean),
